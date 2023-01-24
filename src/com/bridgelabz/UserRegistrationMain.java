@@ -10,7 +10,7 @@ public class UserRegistrationMain {
         String firstName = sc.next();
         UserDetailsValidation.isValidFirstName(firstName);
 
-        System.out.println("Enter the last name : ");
+        System.out.println("Enter the last name :: ");
         String lastName = sc.next();
         UserDetailsValidation.isValidLastName(lastName);
     }
