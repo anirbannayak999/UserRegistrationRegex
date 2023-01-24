@@ -4,8 +4,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class  UserDetailsValidation {
-
-
     public static void isValidFirstName(String firstName) {
         String regex = "^[A-Z]{1}[a-z]{2,}$";
 
@@ -51,9 +49,23 @@ public class  UserDetailsValidation {
         if (matcher.matches())
             System.out.println(mobNo + "   >> this Mobile number is valid.");
         else
-            System.out.println(mobNo + "   >>Mobile number is not valid.");
+            System.out.println(mobNo + "   >> this Mobile number is not valid.");
+    }
+
+    public static void isValidPassword(String password) {
+        String regex = "^[a-z A-Z 0-9 _@./#&+-]{8,}$";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
+
+        if(matcher.matches()) {
+            System.out.println(password + "    >> this Password is valid.");
+        }else {
+            System.out.println(password + "    >> this Password is not valid.");
+        }
     }
 }
+
 
 
 
