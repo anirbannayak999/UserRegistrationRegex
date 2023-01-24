@@ -26,7 +26,7 @@ public class  UserDetailsValidation {
         if(matcher.matches()){
             System.out.println("valid.");
         }else{
-            System.out.println("invalid.");
+            System.out.println("invalid.&.");
         }
     }
 }
