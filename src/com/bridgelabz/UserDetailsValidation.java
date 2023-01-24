@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 public class  UserDetailsValidation {
 
+
     public static void isValidFirstName(String firstName) {
         String regex = "^[A-Z]{1}[a-z]{2,}$";
 
@@ -40,7 +41,20 @@ public class  UserDetailsValidation {
         else
             System.out.println(mail + "       >>" + "this Email is not valid.");
     }
+
+    public static void isValidMobileNumber(String mobNo) {
+        String regex = "^[+]?(91)[\\s][0-9]{10}$"; // 91 {10digit}
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(mobNo);
+
+        if (matcher.matches())
+            System.out.println(mobNo + "   >> this Mobile number is valid.");
+        else
+            System.out.println(mobNo + "   >>Mobile number is not valid.");
+    }
 }
+
 
 
 
