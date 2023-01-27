@@ -53,7 +53,7 @@ public class  UserDetailsValidation {
     }
 
     public static void isValidPassword(String password) {
-        String regex = "(?=.*[A-Z])[\\d \\w \\W]{8,}";
+        String regex = "(?=.[A-Z])(?=.[\\d])[\\d \\w \\W]{7,}";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
@@ -66,8 +66,6 @@ public class  UserDetailsValidation {
 
 
 }
-
-
 
 
 
