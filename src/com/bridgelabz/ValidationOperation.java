@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ValidationOperation {
 
     public class ValidationOperations {
-        public class ValidationOperations {
+
             static Scanner sc = new Scanner(System.in);
 
             public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class ValidationOperation {
                 UserDetailsValidation.isValidMobileNumber("98765432100");
                 System.out.println("****************\n");
 
-                UserDetailsValidation.isValidPassword("Abcdefgh@");
+                UserDetailsValidation.isValidPassword("Abcdef1%");
                 UserDetailsValidation.isValidPassword("@aBcd1234");
                 UserDetailsValidation.isValidPassword("abCD12345!@#$%^&*+()-_=,./");
                 UserDetailsValidation.isValidPassword("a@cd123");
@@ -41,4 +41,3 @@ public class ValidationOperation {
 
         }
     }
-}
